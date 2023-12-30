@@ -1,0 +1,43 @@
+<script>
+
+    let cost = 0
+    const discount = 15
+
+    let consultatie = confirm("Aveti nevoie de consultatie ?")
+    if (consultatie) {
+        cost+=500
+    }
+
+    let analizaGenerala = confirm("Solocitati analiza generala de singe ?")
+    if (analizaGenerala) {
+        cost+=500
+    }
+
+    let analizaDetaliata = confirm("Solicitati analiza de singe detaliata ?")
+    if (analizaDetaliata) {
+        cost+=800
+    }
+
+    let ultrasonografie = confirm("Solicitati ultrasonografie ?")
+    if (ultrasonografie) {
+        cost+=300
+    }
+
+    let testCovid = confirm("Solicitati testul la COVID19 ?")
+    if (testCovid) {
+        cost+=900
+    }
+
+    if (cost>=1500) {
+        alert(
+            "Total cost " + cost + "\n" +
+            "discoungt % " + discount + "\n" +
+            "cost cu discount " + (100-discount)*cost/100
+        )
+    } else {
+        alert(
+            "Total cost " + cost
+        )
+    }
+
+</script>
